@@ -17,7 +17,7 @@ void loop() {
   pixels.clear(); // Set all pixel colors to 'off'
 
   for(int i=0 ; i < NUMPIXELS ; i++){
-    uint8_t hue = map(i, 0, NUMPIXELS - 1, 0, 65535);
+    uint16_t hue = map(i, 0, NUMPIXELS - 1, 0, 65535);
     //pixels.setPixelColor(第幾顆, pixels.Color(Red, Green, Blue));
     pixels.setPixelColor(i, pixels.ColorHSV(hue));
     pixels.show();
